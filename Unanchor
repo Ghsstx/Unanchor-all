@@ -1,0 +1,18 @@
+function exPro(root)
+for _, v in pairs(root:GetChildren()) do
+if v:IsA("BasePart") then
+v.Material = "Plastic"
+v.Transparency = 0
+v.Anchored = false
+v.Locked = false
+end
+exPro(v)
+end
+end
+function asdf(root)
+for _, v in pairs(root:GetChildren()) do
+asdf(v)
+end
+end
+exPro(game.Workspace)
+asdf(game.Workspace)
